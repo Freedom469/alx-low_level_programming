@@ -8,15 +8,13 @@
  * Return: always 0
  */
 int _putchar(char c)
-{
-putchar('_');
-putchar('p');
-putchar('u');
-putchar('t');
-putchar('c');
-putchar('h');
-putchar('a');
-putchar('r');
-putchar('\n');
+{	
+	int i;
+	c[8] = "_putchar";
+	for (i = 0; i < 7; i++;)
+	{
+		_putchar(c[i]);
+	}	
+_putchar('\n');
 return (0);
 }
