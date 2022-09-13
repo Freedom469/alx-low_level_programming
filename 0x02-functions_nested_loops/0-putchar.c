@@ -1,20 +1,20 @@
 #include "main.h"
 /**
- *_putchar - first entry point
+ * main - main
+ * 
  *
- *
- *
- *
- * Return: always 0
+ * Return: 0 success
  */
-int _putchar(char c)
-{	
+
+int main(void)
+{
 	int i;
-	c[8] = "_putchar";
-	for (i = 0; i < 7; i++;)
+	char c[8]  = "_putchar";
+
+	for (i = 0; i <= 7; i++)
 	{
-		_putchar(c[i]);
-	}	
-_putchar('\n');
-return (0);
+	_putchar(c[i]);
+	}
+	_putchar('\n');
+	return (0);
 }
