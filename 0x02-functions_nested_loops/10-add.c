@@ -15,7 +15,7 @@ int sum;
 
 	sum = a + b;
 
-	_putchar('0' + sum);
+	_putchar(sum);
 
 return (0);
 }
