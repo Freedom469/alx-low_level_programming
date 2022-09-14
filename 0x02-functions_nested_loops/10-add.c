@@ -15,7 +15,7 @@ int sum;
 
 	sum = a + b;
 
-	return(sum);
+	return (sum);
 
 return (0);
 }
