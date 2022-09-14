@@ -17,10 +17,12 @@ int rem;
 	if (rem < 0)
 	{
 		_putchar(-rem + 48);
+		return (-rem);
 	}
 	else
 	{
 		_putchar(rem + 48);
+		return (rem);
 	}
 
 return (0);
