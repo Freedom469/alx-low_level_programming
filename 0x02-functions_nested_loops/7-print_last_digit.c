@@ -13,7 +13,7 @@ int print_last_digit(int i)
 int rem;
 
 	rem = i % 10;
-	
+
 	if (rem < 0)
 	{
 		_putchar(-rem + 48);
