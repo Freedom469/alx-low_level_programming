@@ -3,16 +3,21 @@
 /**
  *print_rev - Write a function that prints a string, in reverse,
  *followed by a new line.
- *
+ *@s: variable pointer
  */
 void print_rev(char *s)
 {
-	while ( *s != '\0')
+	int i = 0;
+
+	while (*(s + i) != '\0')
 	{
-		*s++;
+		i++;
 	}
-	while (s--)
+	while (i--)
 	{
-		_putchar(*s);
+		_putchar(s[i]);
 	}
+
+	_putchar('\n');
+
 }
