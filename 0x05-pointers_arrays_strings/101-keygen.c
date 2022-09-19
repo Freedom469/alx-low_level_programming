@@ -4,11 +4,10 @@
 #include "main.h"
 
 /**
- *main - entry point
- *
- *Return: generated password
- */
-
+* main - entry point
+*
+*Return: generated passwords
+*/
 int main(void)
 {
 	char c;
@@ -22,6 +21,5 @@ int main(void)
 		putchar(c);
 	}
 	putchar(2772 - x);
-
 	return (0);
-}
+} 
