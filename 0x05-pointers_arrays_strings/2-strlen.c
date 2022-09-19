@@ -12,10 +12,9 @@
 int _strlen(char *s)
 {
 
-	int i =  strlen(s);
+	int count = 0;
 
-		_putchar(i + '0');
-
-
-return (0);
+	while (*(s + count) != '\0')
+		count++;
+	return (count);
 }
