@@ -1,24 +1,25 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
- *print_array - prints n element of array
- *@a: array
- *@n: number of elements
- *Return: nothing
+ *_atoi - converts a string to an int
+ *@s: the string to be changed
+ *
+ *Return: the converted int
 */
 
-void print_array(int *a, int n)
+int _atoi(char *s)
 {
-	int inc;
+	int sign = 1;
+	unsigned int num = 0;
 
-	for (inc = 0; inc < n ; inc++)
-	{
-		if (inc != n - 1)
-			printf("%d, ", a[inc]);
-		else
-			printf("%d", a[inc]);
+	do {
+		if (*s == '-')
+			sign *= -1;
+		else if (*s >= '0' && *s <= '9')
+			num = num * 10 + (*s - '0');
+		else if (num > 0)
+			break;
+	} while (*s++);
 
-	}
-	putchar(10);
+	return (num * sign);
 }
