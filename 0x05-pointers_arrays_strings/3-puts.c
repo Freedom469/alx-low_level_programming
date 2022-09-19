@@ -9,9 +9,6 @@
 
 void _puts(char *str)
 {      
-	char str[] = "";
-
-	char *str = str;
 
 	int count = 0;
 
