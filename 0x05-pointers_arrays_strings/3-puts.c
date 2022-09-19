@@ -18,7 +18,7 @@ void _puts(char *str)
 		{
 			count++;
 		}
-		_putchar(str[count]);
+		_puts("%s", str[count]);
 
 	}
 
