@@ -1,13 +1,15 @@
 #include "main.h"
 
 /**
- *_memset - fills memory with a constant byte
+ * _memset - fills memory with a constant byte
  *
  *@s: string
  *
  *@b: char to be filled to memory
  *
  *@n: number of bytes to be filled
+ *
+ *Return: s
  *
  */
 
