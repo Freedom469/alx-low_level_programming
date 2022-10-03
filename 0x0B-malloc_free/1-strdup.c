@@ -13,7 +13,7 @@
 
 char *_strdup(char *str)
 {
-	int i, j;
+	unsigned int i, j;
 
 	char *ptr;
 
@@ -37,4 +37,5 @@ char *_strdup(char *str)
 
 	return (ptr);
 
+free(ptr);
 }
