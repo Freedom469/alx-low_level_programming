@@ -2,7 +2,7 @@
 #include  "main.h"
 
 /**
- *str_concat _ concatenates two strings
+ *str_concat  - concatenates two strings
  *
  *@s1: string
  *
@@ -14,7 +14,7 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	int total,i,j = 0;
+	int total, i, j = 0;
 
 	char *ptr;
 
@@ -31,7 +31,9 @@ char *str_concat(char *s1, char *s2)
 
 	for (i = 0; s1[i] || s2[i]; i++)
 
-		ptr = (char *)malloc(sizeof(char) * i);
+		total++;
+
+	ptr = (char *)malloc(sizeof(char) * total);
 
 	if (ptr == NULL)
 		return (NULL);
@@ -43,7 +45,5 @@ char *str_concat(char *s1, char *s2)
 		ptr[j++] = s2[i];
 
 	return (ptr);
-} 
-
-
+}
 
