@@ -14,39 +14,36 @@
 
 char *str_concat(char *s1, char *s2)
 {
+	int total,i,j = 0;
 
-	char *str_concat(char *s1, char *s2)
+	char *ptr;
+
+	if (s1 == NULL)
 	{
-		int total,i,j = 0;
 
-		char *ptr;
+		s1 = "";
+	}
 
-		if (s1 == NULL)
-		{
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}
 
-			s1 = "";
-		}
+	for (i = 0; s1[i] || s2[i]; i++)
 
-		if (s2 == NULL)
-		{
-			s2 = "";
-		}
+		ptr = (char *)malloc(sizeof(char) * i);
 
-		for (i = 0; s1[i] || s2[i]; i++)
+	if (ptr == NULL)
+		return (NULL);
 
-			ptr = (char *)malloc(sizeof(char) * i);
+	for (i = 0; s1[i]; i++)
+		ptr[j++] = s1[i];
 
-		if (ptr == NULL)
-			return (NULL);
+	for (i = 0; s2[i]; i++)
+		ptr[j++] = s2[i];
 
-		for (i = 0; s1[i]; i++)
-			ptr[j++] = s1[i];
-
-		for (i = 0; s2[i]; i++)
-			ptr[j++] = s2[i];
-
-		return (ptr);
-	} 
+	return (ptr);
+} 
 
 
-}
+
