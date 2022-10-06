@@ -15,41 +15,38 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i, j;
-	unsigned int len_s1, len_s2, total_len;
-	char *ptr;
-
-	len_s1 = len_s2 = total_len = 0;
+	char *sout;
+	unsigned int ls1, ls2, lsout, i;
 
 	if (s1 == NULL)
-		i = 0;
+		s1 = "";
+
 	if (s2 == NULL)
-		j = 0;
+		s2 = "";
 
-	/* length of s1 and s2 */
-	for (i = 0; *(s1 + i); i++)
-		len_s1++;
-	for (j = 0; *(s2 + j); j++)
-		len_s2++;
+	for (ls1 = 0; s1[ls1] != '\0'; ls1++)
+		;
 
-	if (n >= len_s2)
-	{
-		n = len_s2;
-		total_len = n + len_s1;
-	}
-	else
-		total_len = len_s1 + n;
+	for (ls2 = 0; s2[ls2] != '\0'; ls2++)
+		;
 
-	ptr = malloc(sizeof(*ptr) * total_len + 1);
-	if (ptr == NULL)
+	if (n > ls2)
+		n = ls2;
+
+	lsout = ls1 + n;
+
+	sout = malloc(lsout + 1);
+
+	if (sout == NULL)
 		return (NULL);
 
-	for (i = 0; i < len_s1; i++)
-		ptr[i] = s1[i];
-	for (j = 0; j < n; j++)
-		ptr[i + j] = s2[j];
-	ptr[i + j] = '\0';
+	for (i = 0; i < lsout; i++)
+		if (i < ls1)
+			sout[i] = s1[i];
+		else
+			sout[i] = s2[i - ls1];
 
+	sout[i] = '\0';
 
-	return (ptr);
+	return (sout);
 }
