@@ -1,5 +1,4 @@
 #include "lists.h"
-
 /**
  * add_dnodeint_end - add node at the end
  * @head: head of the node
@@ -27,8 +26,8 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 		return (new);
 	}
 	/**new next will point to head*/
-	new->next = *head;
 	(*head)->prev = new;
+	new->next = *head;
 	*head = new;
 	return (new);
 }
